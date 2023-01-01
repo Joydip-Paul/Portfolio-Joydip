@@ -1,0 +1,42 @@
+.header {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    &-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__left {
+            .logo {
+                color: #fff;
+            }
+        }
+
+        &__right {
+            ul {
+                padding: 0;
+                margin: 0;
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                height: 80px;
+
+                li {
+                    a {
+                        text-decoration: none;
+
+                        img {
+                            width: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

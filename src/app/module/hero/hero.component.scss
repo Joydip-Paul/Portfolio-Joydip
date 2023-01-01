@@ -1,0 +1,69 @@
+@use 'mixins' as *;
+@use 'variables' as *;
+
+.hero {
+    &-section {
+        background-color: $primaryColor;
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        &__left {
+            padding-top: 150px;
+
+            h1 {
+                color: #fff;
+                font-size: 3.5em;
+                margin-bottom: 25px;
+
+                span {
+                    position: relative;
+                    z-index: 99;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: 8px;
+                        left: 0;
+                        width: 100%;
+                        height: 8px;
+                        background-color: #ffcc00e6;
+                        z-index: -1;
+                    }
+                }
+            }
+
+            p {
+                margin-bottom: 25px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $secondaryColor;
+                font-size: 1.2em;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $secondaryColor;
+                }
+            }
+        }
+
+        &__right {
+            figure {
+                width: 300px;
+                margin-left: auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
