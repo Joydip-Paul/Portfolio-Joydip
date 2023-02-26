@@ -48,5 +48,28 @@
                 }
             }
         }
+
+        @include breakpoint-max(991px) {
+            h1 {
+                font-size: 3em;
+            }
+        }
+
+        @include breakpoint-max (575px) {
+            width: 100%;
+            text-align: center;
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 16px;
+            }
+
+            ul {
+                justify-content: center;
+            }
+        }
     }
 }
