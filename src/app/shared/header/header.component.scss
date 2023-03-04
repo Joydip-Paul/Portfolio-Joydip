@@ -8,6 +8,7 @@
     left: 0;
     right: 0;
     width: 100%;
+    z-index: 999;
 
     &-inner {
         display: flex;
@@ -20,6 +21,7 @@
                 a {
                     color: #fff;
                     cursor: pointer;
+                    text-transform: uppercase;
 
                     img {
                         width: 20px;
@@ -36,6 +38,7 @@
                 text-transform: capitalize;
                 display: flex;
                 align-items: center;
+                text-transform: uppercase;
 
                 img {
                     width: 20px;
