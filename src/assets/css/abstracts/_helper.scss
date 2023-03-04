@@ -17,4 +17,14 @@
             }
         }
     }
+
+    .pt-#{$value} {
+        padding-top: $value+px;
+
+        @include breakpoint-max(991px) {
+            @if($i >=10) {
+                padding-top: $value / 2 +px;
+            }
+        }
+    }
 }
