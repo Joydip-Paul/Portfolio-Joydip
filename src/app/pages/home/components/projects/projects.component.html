@@ -1,4 +1,4 @@
-<section class="projects pt-100 pb-70">
+<!-- <section class="projects pt-100 pb-70">
     <div class="container">
         <div class="title-area pb-50">
             <h2>projects</h2>
@@ -21,4 +21,35 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
+<!-- Each project is a unique piece of development -->
+<div class="project-card pb-50">
+    <div class="container">
+        <div class="title-area pb-50">
+            <h2>projects</h2>
+            <h4>These are some of my works</h4>
+        </div>
+        <div class="project-card__each mb-50" *ngFor="let item of projectList; let i = index">
+            <div class="project-card__each--left">
+               <a href="">
+                <figure>
+                    <img src={{item.thumb}} alt="">
+                </figure>
+               </a>
+            </div>
+            <div class="project-card__each--right">
+                <h3>{{item.title}}</h3>
+                <p>{{item.des}}</p>
+                <div class="lang">
+                    <h2>{{item.lang}}</h2>
+                    <!-- <h2>{{item.language1}}</h2> -->
+                    <!-- <h2>{{item.language1}}</h2> -->
+                </div>
+                <div class="live-code">
+                    <h2>Code</h2>
+                    <h2>Live Demo</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

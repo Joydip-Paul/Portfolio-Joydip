@@ -19,9 +19,10 @@
         &__left {
             .logo {
                 a {
-                    color: #fff;
+                    color: #212121;
                     cursor: pointer;
-                    text-transform: uppercase;
+                    // text-transform: uppercase;
+                    font-weight: 600;
 
                     img {
                         width: 20px;
@@ -34,11 +35,12 @@
 
             a {
                 text-decoration: none;
-                color: #fff;
+                color: #212121;
                 text-transform: capitalize;
                 display: flex;
                 align-items: center;
-                text-transform: uppercase;
+                // text-transform: uppercase;
+                font-weight: 600;
 
                 img {
                     width: 20px;
