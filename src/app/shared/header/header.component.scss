@@ -16,36 +16,23 @@
         align-items: center;
         height: 70px;
 
-        &__left {
-            .logo {
-                a {
-                    color: #212121;
-                    cursor: pointer;
-                    // text-transform: uppercase;
-                    font-weight: 600;
-
-                    img {
-                        width: 20px;
-                    }
-                }
+        a {
+            text-decoration: none;
+            color: #212121;
+            text-transform: capitalize;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            i {
+                margin-right: 5px;
+                line-height: 1;
             }
         }
 
-        &__right {
-
+        @include breakpoint-max (767px) {
             a {
-                text-decoration: none;
-                color: #212121;
-                text-transform: capitalize;
-                display: flex;
-                align-items: center;
-                // text-transform: uppercase;
-                font-weight: 600;
-
-                img {
-                    width: 20px;
-                    margin-right: 5px;
-                    line-height: 1;
+                span {
+                    display: none;
                 }
             }
         }

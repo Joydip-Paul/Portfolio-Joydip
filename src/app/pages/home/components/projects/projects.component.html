@@ -23,7 +23,7 @@
     </div>
 </section> -->
 <!-- Each project is a unique piece of development -->
-<div class="project-card pb-50">
+<div class="project-card pt-100 pb-50">
     <div class="container">
         <div class="title-area pb-50">
             <h2>projects</h2>
@@ -40,14 +40,12 @@
             <div class="project-card__each--right">
                 <h3>{{item.title}}</h3>
                 <p>{{item.des}}</p>
-                <div class="lang">
-                    <h2>{{item.lang}}</h2>
-                    <!-- <h2>{{item.language1}}</h2> -->
-                    <!-- <h2>{{item.language1}}</h2> -->
-                </div>
+                <ul class="lang">
+                    <li *ngFor="let lang of item.language">{{lang.title}}</li>
+                </ul>
                 <div class="live-code">
-                    <h2>Code</h2>
-                    <h2>Live Demo</h2>
+                    <h2><i class="fa-brands fa-github"></i> Code</h2>
+                    <h2>Live Demo <i class="fa-solid fa-eye"></i></h2>
                 </div>
             </div>
         </div>

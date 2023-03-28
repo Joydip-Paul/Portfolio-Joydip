@@ -14,9 +14,11 @@ export class ProjectsComponent implements OnInit {
       "des": "This website template made for a furniture shop.",
       "thumb": "assets/images/furnix.png",
       "language1": "HTML",
-      "lang": [
-        "2012","2023"
-    ],
+      "language": [
+        {"title": "ANGULAR-JS"},
+        {"title": "SCSS"}
+      ],
+      "github_link": "https://github.com/Joydip-Paul/Furnix",
       "site_link": "https://furnix-jd.netlify.app"
     },
     {
@@ -24,16 +26,24 @@ export class ProjectsComponent implements OnInit {
       "title": "Kahnapina",
       "des": "This website template made for a restaurant.",
       "thumb": "assets/images/khanapina.png",
-      "language": "ANGULAR-JS,SCSS",
+      "language": [
+        {"title": "ANGULAR-JS"},
+        {"title": "SCSS"}
+      ],
+      "github_link": "https://github.com/Joydip-Paul/khanapina",
       "site_link": "https://khanapina-bd.netlify.app"
     },
     {
       "id": 3,
-      "title": "Homepay",
+      "title": "Mogo",
       "des": "This website made for a online payment system.",
-      "thumb": "assets/images/homePay.png",
-      "language": "Html, CSS, JAVASCRIPT",
-      "site_link": "https://homepay-bd.netlify.app"
+      "thumb": "assets/images/mogo.png",
+      "language": [
+        {"title": "ANGULAR-JS"},
+        {"title": "SCSS"}
+      ],
+      "github_link": "https://github.com/Joydip-Paul/Angular-Template-Design",
+      "site_link": "https://mogo-jd.netlify.app/"
     }
   ]
 
