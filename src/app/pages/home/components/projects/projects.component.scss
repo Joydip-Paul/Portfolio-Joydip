@@ -1,5 +1,5 @@
-@use 'variables' as *;
-@use 'mixins' as *;
+@use "variables" as *;
+@use "mixins" as *;
 
 // .projects {
 //     background-color: #212121;
@@ -75,106 +75,99 @@
 //     }
 // }
 
-
 .project-card {
-    .title-area {
-                h2 {
-                    font-family: 'Orbitron', sans-serif;
-                    margin-bottom: 20px;
-                    font-weight: 600;
-                }
-            }
-    &__each {
-        display: flex;
-        align-items: center;
-        box-shadow: 0 0 10px rgba(0,0,0,.1);
-        background-color: #fff;
-        border-radius: 1.5rem;
-
-        &--left {
-            background-color: #75757533;
-            border-radius: 1.5rem;
-            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
-            height: 25rem;
-            overflow: hidden;
-            flex: 50%;
-            margin: 20px;
-
-            figure {
-                width: 100%;
-                img {
-                    width: 100%;
-                    transition: transform 10s ease-in-out 0s;
-                }
-                &:hover {
-                        img {
-                            transform: translateY(-100%) translateY(25rem);
-                        }
-                }
-            }
-
-        }
-
-        &--right {
-            padding: 30px;
-            text-align: center;
-            flex: 50%;
-
-            h3 {
-                font-size: 2em;
-                margin-bottom: 20px;
-            }
-
-            p {
-                font-size: 1.2em;
-                margin-bottom: 30px;
-            }
-            .lang {
-                display: flex;
-                justify-content: center;
-                list-style: none;
-                padding: 0;
-                margin-bottom: 80px;
-                li {
-                    background-color: #fff;
-                    box-shadow: 0 0 10px rgba(0,0,0,.1);
-                    padding: 10px;
-                    margin-right: 20px;
-                    font-size: 1.2em;
-                    border-radius: 5px;
-                }
-            }
-            .live-code {
-                display: flex;
-                justify-content: center;
-                h2 {
-                    font-size: 1.2em;
-                    margin-right: 50px;
-                    &:last-child {
-                        margin-right: 0;
-                    }
-                }
-            }
-        }
-
-
-        @media screen and (max-width: 991px) {
-            flex-direction: column;
-            height: 40rem;
-            &--left {
-                height: 5rem;
-            }
-
-            &--right {
-flex: 0;
-            }
-        }
-
+  background-image: linear-gradient(to bottom, #efefef, #ffffff);
+  .title-area {
+    h2 {
+      font-family: "Orbitron", sans-serif;
+      margin-bottom: 20px;
+      font-weight: 600;
     }
+  }
+  &__each {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 1.5rem;
+
+    &--left {
+      background-color: #75757533;
+      border-radius: 1.5rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      height: 25rem;
+      overflow: hidden;
+      flex: 50%;
+      margin: 20px;
+
+      figure {
+        width: 100%;
+        img {
+          width: 100%;
+          transition: transform 10s ease-in-out 0s;
+        }
+        &:hover {
+          img {
+            transform: translateY(-100%) translateY(25rem);
+          }
+        }
+      }
+    }
+
+    &--right {
+      padding: 30px;
+      text-align: center;
+      flex: 50%;
+
+      h3 {
+        font-size: 2em;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+      }
+      .lang {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 80px;
+        li {
+          background-color: #fff;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          padding: 10px;
+          margin-right: 20px;
+          font-size: 1.2em;
+          border-radius: 5px;
+        }
+      }
+      .live-code {
+        display: flex;
+        justify-content: center;
+        a {
+          text-decoration: none;
+          font-size: 1.2em;
+          margin-right: 50px;
+          color: $primaryColor;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 991px) {
+      flex-direction: column;
+      height: 40rem;
+      &--left {
+        height: 5rem;
+      }
+
+      &--right {
+        flex: 0;
+      }
+    }
+  }
 }
-
-
-
-
-
-
