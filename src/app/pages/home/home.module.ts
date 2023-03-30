@@ -6,6 +6,7 @@ import { HomeComponent } from './home.component';
 import { MyHeroComponent } from './components/my-hero/my-hero.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ProjectsComponent } from './components/projects/projects.component';
+import { ContactMeComponent } from './contact-me/contact-me.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { ProjectsComponent } from './components/projects/projects.component';
     HomeComponent,
     MyHeroComponent,
     AboutMeComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    ContactMeComponent
   ],
   imports: [
     CommonModule,

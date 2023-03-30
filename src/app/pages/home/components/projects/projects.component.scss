@@ -1,80 +1,6 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-// .projects {
-//     background-color: #212121;
-//     position: relative;
-//     z-index: 1;
-
-//     .title-area {
-//         h2 {
-//             font-family: 'Orbitron', sans-serif;
-//             margin-bottom: 20px;
-//         }
-//     }
-
-//     &__each {
-//         transition: 1s;
-
-//         a {
-//             text-decoration: none;
-//             position: relative;
-//             transition: .3s;
-//             display: block;
-
-//             span {
-//                 position: absolute;
-//                 top: 50%;
-//                 left: 50%;
-//                 transform: translate(-50%, -50%);
-//                 opacity: 0;
-//             }
-
-//             &:hover {
-
-//                 &:before {
-//                     content: "";
-//                     position: absolute;
-//                     top: 0;
-//                     left: 0;
-//                     width: 100%;
-//                     height: 100%;
-//                     background-color: #161616;
-//                 }
-
-//                 span {
-//                     opacity: 1;
-//                     color: $secondaryColor;
-//                 }
-//             }
-
-//             figure {
-//                 height: 200px;
-
-//                 img {
-//                     width: 100%;
-//                     height: 100%;
-//                     object-fit: contain;
-//                 }
-//             }
-//         }
-
-//         h2 {
-//             font-size: 1.4em;
-//         }
-
-//         p {
-//             font-size: 1.2em;
-//             color: $textColor;
-//         }
-
-//         h4 {
-//             font-size: 14px;
-//             color: #787878;
-//         }
-//     }
-// }
-
 .project-card {
   background-image: linear-gradient(to bottom, #efefef, #ffffff);
   .title-area {
@@ -83,6 +9,9 @@
       margin-bottom: 20px;
       font-weight: 600;
     }
+    @include breakpoint-max(767px) {
+      text-align: center;
+    }
   }
   &__each {
     display: flex;
@@ -90,6 +19,10 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     border-radius: 1.5rem;
+
+    &:nth-child(odd) {
+      flex-direction: row-reverse;
+    }
 
     &--left {
       background-color: #75757533;
@@ -151,6 +84,10 @@
           font-size: 1.2em;
           margin-right: 50px;
           color: $primaryColor;
+          transition: 0.3s;
+          &:hover {
+            color: $secondaryColor;
+          }
           &:last-child {
             margin-right: 0;
           }
@@ -161,6 +98,11 @@
     @media screen and (max-width: 991px) {
       flex-direction: column;
       height: 40rem;
+
+      &:nth-child(odd) {
+        flex-direction: column;
+      }
+
       &--left {
         height: 5rem;
       }

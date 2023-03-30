@@ -1,20 +1,26 @@
-@use 'variables' as *;
-@use 'mixins' as *;
+@use "variables" as *;
+@use "mixins" as *;
 
 .draw-border {
-    @include btn-border-drawing($primaryColor, $secondaryColor, 4px, bottom, right);
+  @include btn-border-drawing(
+    $primaryColor,
+    $secondaryColor,
+    4px,
+    bottom,
+    right
+  );
 }
 
 .main-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    line-height: 1.5;
-    font: 700 1.2rem 'Roboto Slab', sans-serif;
-    padding: 1em 3em;
-    letter-spacing: 0.05rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem "Roboto Slab", sans-serif;
+  padding: 1em 3em;
+  letter-spacing: 0.05rem;
 
-    &:focus {
-        outline: 2px dotted #55d7dc;
-    }
+  &:focus {
+    outline: 2px dotted #55d7dc;
+  }
 }

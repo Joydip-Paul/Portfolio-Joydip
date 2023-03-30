@@ -1,8 +1,6 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
-
 .footer {
   background-color: $primaryColor;
   padding-top: 50px;
@@ -15,13 +13,13 @@
       h2 {
         font-size: 1.6em;
         color: #fff;
-        // font-family: 'Great Vibes', cursive;
       }
     }
     &__right {
       ul {
         display: flex;
         list-style: none;
+        padding: 0;
         li {
           margin-right: 10px;
           a {
@@ -31,6 +29,11 @@
           }
         }
       }
+    }
+
+    @include breakpoint-max(767px) {
+      flex-direction: column;
+      justify-content: center;
     }
   }
 }
