@@ -13,7 +13,7 @@ import { HomeModule } from './../pages/home/home.module';
   imports: [
     CommonModule,
     RouterModule,
-    HomeModule
+    HomeModule,
   ],
   exports: [
     HeaderComponent,

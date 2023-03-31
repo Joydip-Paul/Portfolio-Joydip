@@ -6,7 +6,11 @@
         Get in touch
       </h2>
     </div>
-    <form class="contact-form">
+    <form
+      class="contact-form"
+      [formGroup]="contactForm"
+      (ngSubmit)="onSubmit()"
+    >
       <div class="inp-flex">
         <div class="contact-form__each">
           <label>Your Name</label>
@@ -14,11 +18,35 @@
             type="email"
             class="form-control"
             placeholder="Enter first name"
+            formControlName="name"
+            [ngClass]="{
+              'is-invalid': submitted && contactForm.controls.name.errors
+            }"
           />
+          <div
+            *ngIf="submitted && contactForm.controls.name.errors"
+            class="text-danger"
+          >
+            Name is required
+          </div>
         </div>
         <div class="contact-form__each">
           <label>Email address</label>
-          <input type="email" class="form-control" placeholder="Enter email" />
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Enter email"
+            formControlName="email"
+            [ngClass]="{
+              'is-invalid': submitted && contactForm.controls.email.errors
+            }"
+          />
+          <div
+            *ngIf="submitted && contactForm.controls.email.errors"
+            class="text-danger"
+          >
+            Email is required
+          </div>
         </div>
       </div>
       <div class="contact-form__each">
@@ -28,7 +56,17 @@
           id="exampleFormControlTextarea1"
           placeholder="Your message"
           rows="6"
+          formControlName="message"
+          [ngClass]="{
+            'is-invalid': submitted && contactForm.controls.message.errors
+          }"
         ></textarea>
+        <div
+          *ngIf="submitted && contactForm.controls.message.errors"
+          class="text-danger"
+        >
+          Message is required
+        </div>
       </div>
       <div class="submit-btn">
         <button type="submit" class="main-btn">

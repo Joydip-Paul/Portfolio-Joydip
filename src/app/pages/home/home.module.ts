@@ -7,6 +7,7 @@ import { MyHeroComponent } from './components/my-hero/my-hero.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ContactMeComponent } from './contact-me/contact-me.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,11 +16,13 @@ import { ContactMeComponent } from './contact-me/contact-me.component';
     MyHeroComponent,
     AboutMeComponent,
     ProjectsComponent,
-    ContactMeComponent
+    ContactMeComponent,
   ],
   imports: [
     CommonModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class HomeModule { }
