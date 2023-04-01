@@ -25,7 +25,7 @@
           />
           <div
             *ngIf="submitted && contactForm.controls.name.errors"
-            class="text-danger"
+            class="error-text"
           >
             Name is required
           </div>
@@ -43,7 +43,7 @@
           />
           <div
             *ngIf="submitted && contactForm.controls.email.errors"
-            class="text-danger"
+            class="error-text"
           >
             Email is required
           </div>
@@ -63,7 +63,7 @@
         ></textarea>
         <div
           *ngIf="submitted && contactForm.controls.message.errors"
-          class="text-danger"
+          class="error-text"
         >
           Message is required
         </div>
