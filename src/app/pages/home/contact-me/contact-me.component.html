@@ -9,7 +9,7 @@
     <form
       class="contact-form"
       [formGroup]="contactForm"
-      (ngSubmit)="onSubmit()"
+      (ngSubmit)="onSubmit(contactForm.value)"
     >
       <div class="inp-flex">
         <div class="contact-form__each">
@@ -19,6 +19,7 @@
             class="form-control"
             placeholder="Enter first name"
             formControlName="name"
+            [(ngModel)]="username"
             [ngClass]="{
               'is-invalid': submitted && contactForm.controls.name.errors
             }"
@@ -72,6 +73,16 @@
         <button type="submit" class="main-btn">
           Just Send <i class="fa-solid fa-arrow-right"></i>
         </button>
+        <!-- *ngIf="isSuccess" -->
+        <div class="success-message" [ngClass]="{ active: isSuccess }">
+          <div class="icon">
+            <i class="fa-solid fa-check"></i>
+          </div>
+          <div class="content">
+            <h2>Hey, {{ this.username }}</h2>
+            <p>Your submission is successfull & an email has sent.</p>
+          </div>
+        </div>
       </div>
     </form>
   </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -10,10 +11,14 @@ export class ContactMeComponent implements OnInit {
 
   contactForm!: FormGroup;
   submitted = false;
+  isSuccess:boolean = false;
+  username: string = '';
 
-  constructor(private formBuilder: FormBuilder) { }
+  private contactJd: AngularFirestoreCollection<any>;
+  constructor(private formBuilder: FormBuilder, private fireStore: AngularFirestore) { }
 
   ngOnInit(): void {
+    this.contactJd = this.fireStore.collection('enquiry');
     this.contactForm = this.formBuilder.group({
       name:['',[Validators.required,Validators.minLength(3)]],
       email:['',[Validators.required,Validators.email]],
@@ -21,12 +26,23 @@ export class ContactMeComponent implements OnInit {
     })
   }
 
-  onSubmit(){
+  onSubmit(data:any){
+    this.contactJd.add(data).then(res=>{
+      console.log(data);
+    })
+    .catch(err=>{
+      console.log(err);
+    })
     this.submitted = true;
     if(this.contactForm.invalid){
       return
     }
-    alert("Success");
+    else {
+      this.isSuccess = true;
+    }
+    setTimeout(()=>{
+      this.isSuccess = false;
+    },3000)
   }
 
 }
