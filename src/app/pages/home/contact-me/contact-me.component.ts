@@ -42,7 +42,8 @@ export class ContactMeComponent implements OnInit {
     }
     setTimeout(()=>{
       this.isSuccess = false;
+      this.contactForm.reset();
+      this.submitted = false;
     },3000)
   }
-
 }
