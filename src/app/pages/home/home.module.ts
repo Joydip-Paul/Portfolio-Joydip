@@ -12,6 +12,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyB80FsJOOabrT-T-cxAnSfCL4NKfF5_-xo",
@@ -37,7 +39,8 @@ const firebaseConfig = {
     FormsModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    BrowserAnimationsModule
   ]
 })
 export class HomeModule { }

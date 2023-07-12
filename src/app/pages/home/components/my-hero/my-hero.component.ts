@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-my-hero',
   templateUrl: './my-hero.component.html',
-  styleUrls: ['./my-hero.component.scss']
+  styleUrls: ['./my-hero.component.scss'],
 })
 export class MyHeroComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

@@ -1,94 +1,64 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-// .hero {
-//     background-color: $primaryColor;
-//     height: 100vh;
-//     // background: url('../../../../../assets/images/bgg.jpg');
-//     background-repeat: no-repeat;
-//     width: 100%;
-//     background-size: cover;
-//     position: relative;
-//     z-index: 1;
-
-//     video {
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         // z-index: -1;
-//         width: 100%;
-//         height: 100%;
-//         object-fit: cover;
-//         z-index: -1;
-//     }
-
-//     &-content {
-//         position: absolute;
-//         top: 50%;
-//         left: 50%;
-//         transform: translate(-50%, -50%);
-//         text-align: center;
-//         padding-top: 80px;
-
-//         h1 {
-//             font-size: 5em;
-//             margin-bottom: 16px;
-//             font-weight: 700;
-//             text-transform: uppercase;
-//         }
-
-//         h2 {
-//             font-size: 26px;
-//             margin-bottom: 30px;
-//             font-weight: 400;
-//             letter-spacing: 1px;
-//             font-family: 'Orbitron', sans-serif;
-//             color: $secondaryColor;
-//         }
-
-//         ul {
-//             list-style: none;
-//             display: flex;
-//             justify-content: center;
-//             padding: 0;
-
-//             li {
-//                 margin-right: 1em;
-
-//                 img {
-//                     width: 20px;
-//                 }
-
-//                 &:last-child {
-//                     margin-right: 0;
-//                 }
-//             }
-//         }
-
-//         @include breakpoint-max(991px) {
-//             h1 {
-//                 font-size: 3em;
-//             }
-//         }
-
-//         @include breakpoint-max (575px) {
-//             width: 100%;
-//             text-align: center;
-
-//             h1 {
-//                 font-size: 2em;
-//             }
-
-//             h2 {
-//                 font-size: 16px;
-//             }
-
-//             ul {
-//                 justify-content: center;
-//             }
-//         }
-//     }
-// }
+.product-card {
+  margin-top: 200px;
+  margin-left: 200px;
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 320px;
+  border-radius: 5px;
+  &__thumb {
+    margin-bottom: 10px;
+    padding: 10px;
+    figure {
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+      border-radius: 5px;
+      margin-bottom: 0;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+  &__content {
+    padding: 20px;
+    background-color: #f1f3f4;
+    &--header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
+      }
+      h4 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #1e2f4b;
+      }
+    }
+    &--body {
+      margin-bottom: 20px;
+      p {
+        font-size: 18px;
+      }
+    }
+    &--footer {
+      button {
+        background-color: #1e2f4b;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 30px;
+      }
+    }
+  }
+}
 
 .hero {
   //   background-image: linear-gradient(to bottom, #ffffff, #efefef);
