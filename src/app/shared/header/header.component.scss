@@ -1,39 +1,51 @@
-@use 'variables' as *;
-@use 'mixins' as *;
+@use "variables" as *;
+@use "mixins" as *;
 
 .header {
-    background: transparent;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    z-index: 999;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 999;
 
-    &-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 70px;
-
-        a {
-            text-decoration: none;
-            color: #212121;
-            display: flex;
-            align-items: center;
-            font-weight: 600;
-            i {
-                margin-right: 5px;
-                line-height: 1;
-            }
-        }
-
-        @include breakpoint-max (767px) {
-            a {
-                span {
-                    display: none;
-                }
-            }
-        }
+  &-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    a {
+      text-decoration: none;
+      color: #212121;
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      i {
+        margin-right: 5px;
+        line-height: 1;
+      }
     }
+    &__left {
+      a {
+        font-size: 1em;
+      }
+    }
+    &__right {
+      display: flex;
+      a {
+        cursor: pointer;
+        &:not(:last-child) {
+          margin-right: 10px;
+        }
+      }
+      @include breakpoint-max(767px) {
+        a {
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }

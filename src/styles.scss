@@ -1,19 +1,19 @@
-@use './assets/css/abstracts/index' as abstracts;
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+@use "./assets/css/abstracts/index" as abstracts;
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
 
 .auto-y {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 p {
-    font-size: 1em;
+  font-size: 1em;
 }
