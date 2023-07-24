@@ -6,6 +6,16 @@
         Get in touch
       </h2>
     </div>
+
+    <div *ngIf="showDiv">
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam,
+        inventore laboriosam architecto praesentium in sunt dolores? Distinctio
+        molestiae quas totam incidunt nobis. Consequatur neque quia eligendi
+        facilis ea maxime velit.
+      </p>
+    </div>
+
     <form
       class="contact-form"
       [formGroup]="contactForm"

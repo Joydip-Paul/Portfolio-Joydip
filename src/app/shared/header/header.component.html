@@ -16,7 +16,17 @@
           <i class="fa-solid fa-download"></i>
           <span>Download</span>-Cv
         </a>
-        <a (click)="darkMode()">Darkmode</a>
+        <div class="mode-toggle">
+          <a *ngIf="darkActive" (click)="toggleMode('dark')"
+            ><i class="fa-solid fa-sun"></i
+          ></a>
+          <a
+            *ngIf="lightActive"
+            class="mode-toggle_lightActive"
+            (click)="toggleMode2('light')"
+            ><i class="fa-solid fa-moon"></i
+          ></a>
+        </div>
       </div>
     </div>
   </div>

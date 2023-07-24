@@ -2,7 +2,7 @@
 @use "mixins" as *;
 
 .footer {
-  background-color: $primaryColor;
+  background-color: var(--black);
   padding-top: 50px;
   padding-bottom: 50px;
   &-inner {

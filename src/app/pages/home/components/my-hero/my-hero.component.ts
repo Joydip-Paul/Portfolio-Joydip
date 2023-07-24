@@ -2,11 +2,13 @@ import {
   Component,
   ElementRef,
   OnInit,
+  Output,
   QueryList,
   ViewChild,
   ViewChildren,
 } from '@angular/core';
 import { gsap } from 'gsap';
+import { DarkmodeService } from 'src/app/service/darkmode/darkmode.service';
 
 @Component({
   selector: 'app-my-hero',
@@ -14,10 +16,9 @@ import { gsap } from 'gsap';
   styleUrls: ['./my-hero.component.scss'],
 })
 export class MyHeroComponent implements OnInit {
-  @ViewChild('box1') box: ElementRef;
-  @ViewChildren('btn') btnContainers: QueryList<ElementRef>;
+  isDark = false;
 
-  constructor() {}
+  constructor(private darkModeService: DarkmodeService) {}
 
   ngOnInit(): void {
     gsap.from('.hero-content__left', { opacity: 0, duration: 1, y: -50 });

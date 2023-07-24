@@ -2,7 +2,7 @@
 @use "mixins" as *;
 
 .project-card {
-  background-image: linear-gradient(to bottom, #efefef, #ffffff);
+  // background-image: linear-gradient(to bottom, #efefef, #ffffff);
   .title-area {
     h2 {
       font-family: "Orbitron", sans-serif;
@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: var(--bg-grey);
     border-radius: 1.5rem;
 
     &:nth-child(odd) {
@@ -68,7 +68,7 @@
         padding: 0;
         margin-bottom: 80px;
         li {
-          background-color: #fff;
+          background-color: var(--theme-bg);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
           padding: 10px;
           margin-right: 20px;
@@ -83,7 +83,7 @@
           text-decoration: none;
           font-size: 1.2em;
           margin-right: 50px;
-          color: $primaryColor;
+          color: var(--text-color);
           transition: 0.3s;
           &:hover {
             color: $secondaryColor;

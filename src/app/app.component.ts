@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'portfolio';
+  darkMode: boolean = false;
+
+  constructor() { }
+
+  ngOnInit(): void {
+
+  }
+
 }

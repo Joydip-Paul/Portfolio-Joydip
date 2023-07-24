@@ -3,8 +3,8 @@
 
 .draw-border {
   @include btn-border-drawing(
-    $primaryColor,
-    $secondaryColor,
+    var(--text-color),
+    var(--theme-color),
     4px,
     bottom,
     right
