@@ -2,7 +2,7 @@
 @use "mixins" as *;
 
 .project-card {
-  // background-image: linear-gradient(to bottom, #efefef, #ffffff);
+  background-color: var(--section-bg);
   .title-area {
     h2 {
       font-family: "Orbitron", sans-serif;
@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: var(--bg-grey);
+    background-color: var(--theme-bg);
     border-radius: 1.5rem;
 
     &:nth-child(odd) {
@@ -60,20 +60,26 @@
       p {
         font-size: 1.2em;
         margin-bottom: 30px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
       }
       .lang {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         list-style: none;
         padding: 0;
         margin-bottom: 80px;
         li {
-          background-color: var(--theme-bg);
+          background-color: var(--section-bg);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
           padding: 10px;
           margin-right: 20px;
+          margin-bottom: 20px;
           font-size: 1.2em;
           border-radius: 5px;
+          color: var(--text-color);
         }
       }
       .live-code {
@@ -86,7 +92,7 @@
           color: var(--text-color);
           transition: 0.3s;
           &:hover {
-            color: $secondaryColor;
+            color: var(--text-color);
           }
           &:last-child {
             margin-right: 0;

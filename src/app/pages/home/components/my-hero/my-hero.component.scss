@@ -3,7 +3,7 @@
 
 .hero {
   //   background-image: linear-gradient(to bottom, #ffffff, #efefef);
-  background-color: var(--theme-bg);
+  background-color: var(--section-bg);
   &-inner {
     display: flex;
     min-height: 100vh;
@@ -47,7 +47,7 @@
         display: flex;
         a {
           text-decoration: none;
-          color: var(--theme-color);
+          color: var(--text-color);
           margin-right: 20px;
           i {
             font-size: 2em;

@@ -2,6 +2,7 @@
 @use "mixins" as *;
 
 .contact {
+  background-color: var(--section-bg);
   .title-area {
     margin-bottom: 50px;
     h2 {
@@ -30,13 +31,14 @@
       label {
         font-size: 1em;
         margin-bottom: 10px;
+        color: var(--text-color);
       }
       input,
       textarea {
         box-shadow: none;
         border-radius: 0;
-        background-color: var(--bg-grey);
-        border: 1px solid var(--bg-grey);
+        background-color: var(--theme-bg);
+        border: 1px solid var(--theme-bg);
         padding: 16px;
       }
     }
@@ -46,11 +48,12 @@
       align-items: center;
       margin-top: 30px;
       button {
-        background-color: var(--bg-grey);
-        color: #fff;
+        background-color: var(--btn-bg);
+        color: var(--btn-color);
         font-weight: 500;
         &:hover {
-          background-color: #000;
+          background-color: var(--btn-bg-hover);
+          color: var(--btn-color-hover);
         }
       }
       .success-message {

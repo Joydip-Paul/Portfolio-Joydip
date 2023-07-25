@@ -4,7 +4,7 @@
 .draw-border {
   @include btn-border-drawing(
     var(--text-color),
-    var(--theme-color),
+    var(--secondary-color),
     4px,
     bottom,
     right
