@@ -1,0 +1,46 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.blog {
+    background-color: var(--section-bg);
+    .title-area {
+        h2 {
+          font-family: "Orbitron", sans-serif;
+          margin-bottom: 20px;
+          font-weight: 600;
+        }
+        @include breakpoint-max(767px) {
+          text-align: center;
+        }
+      }
+    &-each {
+        background-color: var(--theme-bg);
+        border-radius: 5px;
+        text-decoration: none;
+        display: block;
+       figure {
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+            img {
+                width: 100%;
+            }
+        }
+        &__content {
+            padding: 10px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            &--left {
+                h2 {
+                    font-size: 1.4em;
+                }
+            }
+            button {
+                background-color: transparent;
+                border: none;
+                font-size: 30px;
+                color: var(--paragraph);
+            }
+        }
+    }
+}

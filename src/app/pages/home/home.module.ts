@@ -13,6 +13,7 @@ import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/compat/firestore';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BlogComponent } from './components/blog/blog.component';
 
 
 const firebaseConfig = {
@@ -32,6 +33,7 @@ const firebaseConfig = {
     AboutMeComponent,
     ProjectsComponent,
     ContactMeComponent,
+    BlogComponent,
   ],
   imports: [
     CommonModule,

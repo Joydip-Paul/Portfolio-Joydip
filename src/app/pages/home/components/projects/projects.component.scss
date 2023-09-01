@@ -16,9 +16,16 @@
   &__each {
     display: flex;
     align-items: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: var(--theme-bg);
     border-radius: 1.5rem;
+    transition: .3s;
+    border: 1px solid var(--theme-bg);
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      background-color: var(--section-bg);
+      border: 1px solid var(--border-color);
+    }
 
     &:nth-child(odd) {
       flex-direction: row-reverse;

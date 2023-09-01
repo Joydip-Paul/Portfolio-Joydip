@@ -34,9 +34,10 @@
       text-align: justify;
     }
 
-    button {
+    a {
       font-family: "Orbitron", sans-serif;
       font-size: 1em;
+      display: inline-block;
     }
 
     @include breakpoint-max(575px) {
