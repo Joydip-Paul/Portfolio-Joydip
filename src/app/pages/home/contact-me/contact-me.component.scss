@@ -5,10 +5,31 @@
   background-color: var(--section-bg);
   .title-area {
     margin-bottom: 50px;
+    max-width: 680px;
+    .eyebrow {
+      color: var(--secondary-color);
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      span {
+        display: inline-block;
+        width: 28px;
+        height: 2px;
+        background: var(--secondary-color);
+        margin: 0 10px 3px 0;
+      }
+    }
     h2 {
       font-family: "Orbitron", sans-serif;
-      margin-bottom: 20px;
+      margin: 10px 0 16px;
       font-weight: 600;
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      letter-spacing: -1px;
+    }
+    p {
+      color: var(--paragraph);
+      max-width: 540px;
     }
     @include breakpoint-max(767px) {
       text-align: center;
@@ -40,6 +61,11 @@
         background-color: var(--theme-bg);
         border: 1px solid var(--theme-bg);
         padding: 16px;
+        transition: border-color .2s ease, box-shadow .2s ease;
+        &:focus {
+          border-color: var(--secondary-color);
+          box-shadow: 0 0 0 3px rgba(190, 52, 85, .12);
+        }
       }
     }
     .submit-btn {
@@ -64,7 +90,7 @@
         border-radius: 10px;
         display: flex;
         align-items: center;
-        transform: translateY-(100%);
+        transform: translateY(-100%);
         opacity: 0;
         transition: 1s;
         .icon {

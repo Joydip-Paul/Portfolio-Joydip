@@ -9,21 +9,20 @@ export class ProjectsComponent implements OnInit {
   projectList = [
     {
       id: 1,
-      title: 'Furnix',
-      des: 'This website template made for a furniture shop.You can find elegent wooden and metal furniture products',
-      thumb: 'assets/images/furnix.png',
-      language1: 'HTML',
-      language: [{ title: 'HTML' }, { title: 'SCSS' }, { title: 'BOOTSTRAP' }],
-      github_link: 'https://github.com/Joydip-Paul/Furnix',
-      site_link: 'https://furnix-jd.netlify.app',
+      title: 'Bite & Blend',
+      des: 'This is a website template made for a restaurant. You can cart your item and order food from Bite & Blend.',
+      thumb: 'assets/images/bite-blend.png',
+      language: [{ title: 'ANGULAR-20' }, { title: 'SCSS' }],
+      github_link: 'https://github.com/Joydip-Paul/Bite-and-Blend',
+      site_link: 'https://biteandblend.com/',
     },
     {
       id: 2,
       title: 'Kahnapina',
-      des: 'This website template made for a restaurant.You can cart your item and order food from khanapina.',
+      des: 'This website template made for a restaurant. You can cart your item and order food from khanapina.',
       thumb: 'assets/images/khanapina.png',
       language: [
-        { title: 'ANGULAR-JS' },
+        { title: 'ANGULAR' },
         { title: 'SCSS' },
         { title: 'BOOTSTRAP' },
       ],
@@ -33,10 +32,10 @@ export class ProjectsComponent implements OnInit {
     {
       id: 3,
       title: 'Manate',
-      des: 'This is a dashboard.Here you can find various types of element like table,charts,modal,forms etc.',
+      des: 'This is a dashboard. Here you can find various types of elements like table, charts, modal, forms etc.',
       thumb: 'assets/images/manate.png',
       language: [
-        { title: 'ANGULAR-JS' },
+        { title: 'ANGULAR' },
         { title: 'NGZORRO' },
         { title: 'SCSS' },
         { title: 'BOOTSTRAP' },
@@ -51,4 +50,8 @@ export class ProjectsComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  trackByProject(index: number, item: any): number {
+    return item.id;
+  }
 }

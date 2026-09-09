@@ -30,19 +30,18 @@ export class ContactMeComponent implements OnInit {
   }
 
   onSubmit(data: any) {
-    this.contactJd.add(data).then(res => {
-      console.log(data);
-    })
-      .catch(err => {
-        console.log(err);
-      })
     this.submitted = true;
     if (this.contactForm.invalid) {
       return
     }
-    else {
-      this.isSuccess = true;
-    }
+
+    this.username = data.name;
+    this.contactJd.add(data).catch(err => console.log(err));
+
+    const whatsappMessage = `Hello Joydip, my name is ${data.name}.\n\nEmail: ${data.email}\n\nMessage:\n${data.message}`;
+    window.open(`https://wa.me/8801759696957?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+    this.isSuccess = true;
+
     setTimeout(() => {
       this.isSuccess = false;
       this.contactForm.reset();

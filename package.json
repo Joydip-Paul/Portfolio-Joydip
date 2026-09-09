@@ -28,6 +28,7 @@
     "ngx-owl-carousel-o": "^7.0.3",
     "popper.js": "^1.16.1",
     "rxjs": "~7.5.0",
+    "subsink": "^1.0.2",
     "swiper": "^8.3.2",
     "tether": "^2.0.0",
     "tslib": "^2.3.0",

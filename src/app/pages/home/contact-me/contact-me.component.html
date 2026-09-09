@@ -1,19 +1,12 @@
 <section class="contact pb-100">
   <div class="container">
     <div class="title-area">
+      <div class="eyebrow"><span></span> Start a conversation</div>
       <h2>
         Love to hear from you,<br />
         Get in touch
       </h2>
-    </div>
-
-    <div *ngIf="showDiv">
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam,
-        inventore laboriosam architecto praesentium in sunt dolores? Distinctio
-        molestiae quas totam incidunt nobis. Consequatur neque quia eligendi
-        facilis ea maxime velit.
-      </p>
+      <p>Have an idea, a question, or a project in mind? Send a message and I'll get back to you soon.</p>
     </div>
 
     <form
@@ -25,11 +18,10 @@
         <div class="contact-form__each">
           <label>Your Name</label>
           <input
-            type="email"
+            type="text"
             class="form-control"
             placeholder="Enter first name"
             formControlName="name"
-            [(ngModel)]="username"
             [ngClass]="{
               'is-invalid': submitted && contactForm.controls.name.errors
             }"
@@ -81,7 +73,7 @@
       </div>
       <div class="submit-btn">
         <button type="submit" class="main-btn">
-          Just Send <i class="fa-solid fa-arrow-right"></i>
+          Send on WhatsApp <i class="fa-brands fa-whatsapp"></i>
         </button>
         <!-- *ngIf="isSuccess" -->
         <div class="success-message" [ngClass]="{ active: isSuccess }">
@@ -90,7 +82,7 @@
           </div>
           <div class="content">
             <h2>Hey, {{ this.username }}</h2>
-            <p>Your submission is successfull & an email has sent.</p>
+            <p>Your message is ready in WhatsApp.</p>
           </div>
         </div>
       </div>

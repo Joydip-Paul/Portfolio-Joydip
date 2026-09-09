@@ -4,6 +4,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { RouterModule } from '@angular/router';
 import { HomeModule } from './../pages/home/home.module';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { HomeModule } from './../pages/home/home.module';
     CommonModule,
     RouterModule,
     HomeModule,
+    FormsModule,
+    HttpClientModule
   ],
   exports: [
     HeaderComponent,

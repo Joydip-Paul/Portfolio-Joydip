@@ -1,33 +1,44 @@
 <section class="project-card pt-100 pb-50">
   <div class="container">
     <div class="title-area pb-50">
-      <h2>projects</h2>
+      <span class="eyebrow">Portfolio</span>
+      <h2>Projects</h2>
       <h4>These are some of my works</h4>
     </div>
-    <div
-      class="project-card__each mb-50"
-      *ngFor="let item of projectList; let i = index"
-    >
-      <div class="project-card__each--left">
-        <a href="{{ item.site_link }}" target="_blank">
-          <figure>
-            <img src="{{ item.thumb }}" alt="" />
-          </figure>
-        </a>
-      </div>
-      <div class="project-card__each--right">
-        <h3>{{ item.title }}</h3>
-        <p>{{ item.des }}</p>
-        <ul class="lang">
-          <li *ngFor="let lang of item.language">{{ lang.title }}</li>
-        </ul>
-        <div class="live-code">
-          <a href="{{ item.github_link }}" target="_blank"
-            ><i class="fa-brands fa-github"></i> Code</a
-          >
-          <a href="{{ item.site_link }}" target="_blank"
-            >Live Demo <i class="fa-solid fa-eye"></i
-          ></a>
+
+    <div class="project-card__grid">
+      <div
+        class="project-card__each"
+        *ngFor="let item of projectList; let i = index"
+        [style.--delay]="i * 0.1 + 's'"
+      >
+        <div class="project-card__thumb">
+          <a href="{{ item.site_link }}" target="_blank" rel="noopener">
+            <img src="{{ item.thumb }}" alt="{{ item.title }}" loading="lazy" />
+            <div class="project-card__overlay">
+              <span class="view-btn">
+                <i class="fa-solid fa-eye"></i> View Live
+              </span>
+            </div>
+          </a>
+        </div>
+
+        <div class="project-card__body">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.des }}</p>
+
+          <ul class="lang">
+            <li *ngFor="let lang of item.language">{{ lang.title }}</li>
+          </ul>
+
+          <div class="live-code">
+            <a href="{{ item.github_link }}" target="_blank" rel="noopener" class="btn-outline">
+              <i class="fa-brands fa-github"></i> Code
+            </a>
+            <a href="{{ item.site_link }}" target="_blank" rel="noopener" class="btn-solid">
+              Live Demo <i class="fa-solid fa-arrow-up-right"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
