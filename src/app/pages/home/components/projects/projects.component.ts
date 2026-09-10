@@ -52,11 +52,8 @@ export class ProjectsComponent implements OnInit {
       thumb: 'assets/images/gitagram.png',
       language: [
         { title: 'ANGULAR' },
-        { title: 'NGZORRO' },
         { title: 'SCSS' },
-        { title: 'BOOTSTRAP' },
-        { title: 'APEXCHARTA' },
-        { title: 'NGXCHARTS' },
+        { title: 'JSON' },
       ],
       github_link: 'https://github.com/Joydip-Paul/Gitagram',
       site_link: 'https://gitagram.netlify.app/',
