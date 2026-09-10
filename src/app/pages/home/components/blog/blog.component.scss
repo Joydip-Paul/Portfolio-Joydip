@@ -115,3 +115,50 @@
         }
     }
 }
+
+.blog {
+    background: var(--theme-bg);
+
+    .title-area {
+        .eyebrow {
+            color: var(--text-color);
+            background: var(--accent-color);
+            border: 2px solid var(--text-color);
+            padding: 6px 10px;
+        }
+
+        h2 {
+            font-size: clamp(2.3rem, 5vw, 4rem);
+            line-height: 1;
+            text-transform: uppercase;
+        }
+    }
+
+    &-each {
+        border: 3px solid var(--text-color);
+        border-radius: 0;
+        box-shadow: 8px 8px 0 var(--text-color);
+        transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+        &:hover {
+            transform: translate(5px, 5px);
+            box-shadow: 3px 3px 0 var(--text-color);
+        }
+
+        &__content {
+            .blog-meta {
+                color: var(--text-color);
+                background: var(--secondary-color);
+                width: fit-content;
+                padding: 4px 7px;
+            }
+
+            .read-link {
+                border: 3px solid var(--text-color);
+                border-radius: 0;
+                background: var(--accent-color);
+                color: var(--text-color);
+            }
+        }
+    }
+}

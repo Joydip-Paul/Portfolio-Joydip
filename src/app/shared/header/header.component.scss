@@ -2,8 +2,8 @@
 @use "mixins" as *;
 
 .header {
-  background: transparent;
-  position: absolute;
+  background: var(--section-bg);
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -14,13 +14,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    min-height: 82px;
+    border-bottom: 3px solid var(--text-color);
     a {
       text-decoration: none;
       color: var(--text-color);
       display: flex;
       align-items: center;
       font-weight: 600;
+      transition: color 0.15s ease;
+      &:hover {
+        color: var(--secondary-color);
+      }
       i {
         margin-right: 5px;
         line-height: 1;
@@ -29,6 +34,12 @@
     &__left {
       a {
         font-size: 1em;
+        @include breakpoint-max(767px) {
+          font-size: 14px;
+          i{
+            display: none;
+          }
+        }
       }
     }
     &__right {
@@ -57,5 +68,15 @@
   }
   &_lightActive {
     display: block;
+  }
+
+  a {
+    border: 2px solid var(--text-color);
+    padding: 8px 10px;
+    box-shadow: 3px 3px 0 var(--text-color);
+    @include breakpoint-max(767px) {
+      font-size: 12px;
+      padding: 5px;
+    }
   }
 }

@@ -36,6 +36,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
+
+    @include breakpoint-max(991px) {
+      grid-template-columns: 1fr; 
+    }
   }
 
   &__each {
@@ -198,6 +202,93 @@
   @media screen and (max-width: 480px) {
     .live-code {
       flex-direction: column;
+    }
+  }
+}
+
+.project-card {
+  background: var(--section-bg);
+
+  .title-area {
+    text-align: left;
+
+    .eyebrow {
+      background: var(--accent-color);
+      border: 2px solid var(--text-color);
+      color: var(--text-color);
+      letter-spacing: 1px;
+      padding: 6px 10px;
+    }
+
+    h2 {
+      font-size: clamp(2.3rem, 5vw, 4rem);
+      line-height: 1;
+      text-transform: uppercase;
+    }
+  }
+
+  &__each {
+    background: var(--theme-bg);
+    border: 3px solid var(--text-color);
+    border-radius: 0;
+    box-shadow: 9px 9px 0 var(--text-color);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+    &:hover {
+      transform: translate(5px, 5px);
+      box-shadow: 4px 4px 0 var(--text-color);
+    }
+  }
+
+  &__thumb img {
+    border-bottom: 5px solid var(--text-color);
+  }
+
+  &__overlay {
+    background: var(--accent-color);
+    align-items: center;
+    padding-bottom: 0;
+
+    .view-btn {
+      color: var(--text-color);
+      border: 3px solid var(--text-color);
+      border-radius: 0;
+      background: var(--theme-bg);
+      box-shadow: 4px 4px 0 var(--text-color);
+      padding: 10px 18px;
+    }
+  }
+
+  &__body {
+    padding: 24px;
+
+    .lang li {
+      background: var(--blue-color);
+      border: 2px solid var(--text-color);
+      border-radius: 0;
+      color: #fffdf8;
+      padding: 6px 10px;
+    }
+
+    .live-code a {
+      border-radius: 0;
+      border: 3px solid var(--text-color);
+      box-shadow: 4px 4px 0 var(--text-color);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+      &:hover {
+        transform: translate(3px, 3px);
+        box-shadow: 1px 1px 0 var(--text-color);
+      }
+    }
+
+    .live-code .btn-outline {
+      border-color: var(--text-color);
+    }
+
+    .live-code .btn-solid {
+      background: var(--secondary-color);
+      color: var(--text-color);
     }
   }
 }

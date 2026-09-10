@@ -20,6 +20,10 @@
         display: flex;
         list-style: none;
         padding: 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+
         li {
           margin-right: 10px;
           a {
@@ -33,6 +37,30 @@
 
     @include breakpoint-max(767px) {
       flex-direction: column;
+    }
+  }
+}
+
+.footer {
+  background: var(--secondary-color);
+  border-top: 3px solid var(--text-color);
+
+  &-inner {
+    &__left h2 {
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+
+    &__right ul li a {
+      display: inline-block;
+      border-bottom: 3px solid var(--text-color);
+      font-weight: 700;
+      padding-bottom: 3px;
+      transition: background 0.15s ease;
+
+      &:hover {
+        background: var(--accent-color);
+      }
     }
   }
 }

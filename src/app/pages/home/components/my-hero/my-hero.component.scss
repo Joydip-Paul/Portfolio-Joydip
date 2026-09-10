@@ -2,22 +2,24 @@
 @use "mixins" as *;
 
 .hero {
-  //   background-image: linear-gradient(to bottom, #ffffff, #efefef);
   background-color: var(--section-bg);
+  background-image: radial-gradient(var(--text-color) 1px, transparent 1px);
+  background-size: 18px 18px;
   &-inner {
     display: flex;
-    min-height: 100vh;
+    min-height: calc(100vh - 85px);
   }
   &-content {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 0 100px;
+    padding: 70px 0;
     @include breakpoint-max(1199px) {
       padding: 0;
     }
     &__left {
-      padding-right: 5em;
+      padding: 40px 70px 40px 0;
+      background: var(--section-bg);
       flex: 1;
 
       img {
@@ -33,12 +35,15 @@
         }
       }
       h1 {
-        font-size: 3em;
+        font-size: clamp(3rem, 7vw, 6.5rem);
+        line-height: 0.98;
         font-weight: 700;
         margin-bottom: 20px;
+        text-transform: uppercase;
       }
       p {
-        font-size: 1.4em;
+        font-size: 1.2em;
+        max-width: 480px;
         margin-bottom: 30px;
       }
       ul {
@@ -48,6 +53,17 @@
         a {
           text-decoration: none;
           color: var(--text-color);
+          border: 3px solid var(--text-color);
+          display: grid;
+          place-items: center;
+          width: 48px;
+          height: 48px;
+          box-shadow: 4px 4px 0 var(--text-color);
+          transition: transform 0.15s ease, background 0.15s ease;
+          &:hover {
+            background: var(--accent-color);
+            transform: translate(3px, 3px);
+          }
           margin-right: 20px;
           i {
             font-size: 2em;
@@ -73,6 +89,9 @@
       flex: 1;
       figure {
         height: 100%;
+        border: 5px solid var(--text-color);
+        box-shadow: 12px 12px 0 var(--secondary-color);
+        margin: 0;
 
         img {
           width: 100%;
@@ -87,7 +106,7 @@
     &-inner {
       min-height: 100%;
       padding-bottom: 30px;
-      padding-top: 100px;
+      padding-top: 70px;
     }
     &-content {
       flex-direction: column;
@@ -95,6 +114,7 @@
       &__left {
         flex: initial;
         margin-bottom: 30px;
+        padding-right: 0;
       }
 
       &__right {

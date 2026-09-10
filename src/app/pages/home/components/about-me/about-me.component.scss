@@ -203,3 +203,46 @@
     }
   }
 }
+
+.about-me {
+  background: var(--theme-bg);
+
+  &__left {
+    h2 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      display: inline;
+      background: var(--accent-color);
+      box-shadow: 5px 5px 0 var(--text-color);
+      padding: 4px 8px;
+      line-height: 1.8;
+    }
+  }
+
+  &__right .skills {
+    gap: 14px;
+
+    &-each {
+      background: var(--section-bg);
+      border: 3px solid var(--text-color);
+      border-radius: 0;
+      box-shadow: 6px 6px 0 var(--text-color);
+      transition: transform 0.15s ease;
+
+      &:hover {
+        transform: translate(4px, 4px) rotate(-2deg);
+      }
+    }
+
+    .center {
+      background: var(--secondary-color);
+      border: 3px solid var(--text-color);
+      border-radius: 0;
+      box-shadow: 6px 6px 0 var(--text-color);
+    }
+  }
+}

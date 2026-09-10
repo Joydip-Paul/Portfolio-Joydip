@@ -45,6 +45,22 @@ export class ProjectsComponent implements OnInit {
       github_link: 'https://github.com/Joydip-Paul/Dashboard-CRM',
       site_link: 'https://manate-jd.netlify.app/',
     },
+    {
+      id: 3,
+      title: 'Gitagram',
+      des: 'Here you can find various types of verses and their meaning. You can learn shangskrit language and its meaning. You can also find the meaning of the verse in your own language.',
+      thumb: 'assets/images/gitagram.png',
+      language: [
+        { title: 'ANGULAR' },
+        { title: 'NGZORRO' },
+        { title: 'SCSS' },
+        { title: 'BOOTSTRAP' },
+        { title: 'APEXCHARTA' },
+        { title: 'NGXCHARTS' },
+      ],
+      github_link: 'https://github.com/Joydip-Paul/Gitagram',
+      site_link: 'https://gitagram.netlify.app/',
+    },
   ];
 
   constructor() {}

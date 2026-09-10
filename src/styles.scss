@@ -1,6 +1,41 @@
 @use "./assets/css/abstracts/index" as abstracts;
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;800");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap");
+@use "variables" as *;
+@use "mixins" as *;
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--section-bg);
+  color: var(--text-color);
+  font-family: "Space Grotesk", sans-serif;
+  cursor:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath d='M7 3l15 14-7 1 5 9-4 2-5-10-5 5z' fill='%23c9f31d' stroke='%23171717' stroke-width='2'/%3E%3C/svg%3E")
+      3 3,
+    auto;
+}
+
+a,
+button,
+input,
+textarea {
+  cursor: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 4px;
+}
 
 .auto-y {
   display: flex;
@@ -11,11 +46,46 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Archivo Black", sans-serif;
   color: var(--text-color);
+  letter-spacing: 0;
 }
 
 p {
   font-size: 1em;
   color: var(--paragraph);
+  line-height: 1.65;
+}
+
+section {
+  border-top: 3px solid var(--text-color);
+}
+
+.container {
+  width: min(1120px, calc(100% - 40px));
+  @include breakpoint-max(575px) {
+    width: calc(100% - 10px);
+  }
+}
+
+.main-btn,
+.draw-border {
+  background: var(--btn-bg);
+  border: 3px solid var(--text-color);
+  border-radius: 0;
+  box-shadow: 5px 5px 0 var(--text-color);
+  color: var(--btn-color);
+  padding: 13px 22px;
+  text-decoration: none;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+
+  &:hover {
+    background: var(--accent-color);
+    color: var(--text-color);
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0 var(--text-color);
+  }
 }
