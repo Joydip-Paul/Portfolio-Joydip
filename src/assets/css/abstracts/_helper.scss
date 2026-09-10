@@ -1,4 +1,5 @@
 // Iteration for padding top/bottom and margin top/bottom
+@use 'sass:math';
 @use './mixins' as *;
 
 @for $i from 1 through 20 {
@@ -13,7 +14,7 @@
 
         @include breakpoint-max(991px) {
             @if($i >=10) {
-                margin-bottom: $value / 2 +px;
+                margin-bottom: math.div($value, 2) +px;
             }
         }
     }
@@ -23,7 +24,7 @@
 
         @include breakpoint-max(991px) {
             @if($i >=10) {
-                padding-top: $value / 2 +px;
+                padding-top: math.div($value, 2) +px;
             }
         }
     }
